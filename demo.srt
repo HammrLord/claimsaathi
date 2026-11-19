@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:08,002
+Your health insurance claim was denied. That is not the final answer. This is ClaimSaathi.
+
+2
+00:00:08,692 --> 00:00:26,268
+In a single year, twenty six thousand crore rupees of health claims were denied. Thirty six lakh claims were rejected outright. Yet fewer than one in a hundred ever reach the Insurance Ombudsman, even though more than half of the cases the Ombudsman decides end in the policyholder's favour or a settlement.
+
+3
+00:00:27,152 --> 00:00:37,745
+Families give up because denial letters quote clauses nobody understands, decisions land at the discharge desk, and their rights stay invisible. ClaimSaathi flips that.
+
+4
+00:00:39,221 --> 00:00:48,272
+Let's see it live. Meet Ramesh. His angioplasty claim of one point eight four lakh rupees was rejected for not disclosing hypertension.
+
+5
+00:00:48,272 --> 00:00:57,942
+One click. ClaimSaathi parses the letter, finds the clause the insurer cited, and runs six tests from IRDAI's 2024 Master Circular.
+
+6
+00:00:57,942 --> 00:01:13,901
+Verdict: strong case. Ramesh has been covered for sixty three months. After sixty months, IRDAI's moratorium rule says non-disclosure cannot be raised unless there is proven fraud. And the thirty six month pre-existing disease wait was served long ago.
+
+7
+00:01:13,901 --> 00:01:22,647
+Every finding is backed by a quoted line. Here is the clause the insurer cited, and the moratorium clause in his own policy that defeats it.
+
+8
+00:01:22,647 --> 00:01:35,100
+Then a dated escalation plan, and ready to send drafts. A grievance to the insurer, the Bima Bharosa complaint, and an Ombudsman filing, each citing the exact rule. Copy, or download.
+
+9
+00:01:35,101 --> 00:01:48,091
+Case two. A cataract claim denied under a forty eight month waiting period. IRDAI caps every waiting period at thirty six months. And the discharge decision took five and a half hours, against a three hour limit.
+
+10
+00:01:48,091 --> 00:01:58,395
+And when a denial is sound, ClaimSaathi says so honestly, then tells the family what evidence could still change the outcome, like a medical necessity certificate.
+
+11
+00:01:59,280 --> 00:02:13,876
+Feature tour. PDF and photo ingest. Clause retrieval. Six rule tests. A strength verdict. Quote or abstain evidence. Three legal drafts. A dated escalation plan. Private by design, and mobile ready.
+
+12
+00:02:14,466 --> 00:02:29,301
+Under the hood: clause aware parsing, retrieval, deterministic rule tests written as code, explanations with quoted evidence, and action. Next on the roadmap, a plain language AI layer, Indian languages, and WhatsApp intake.
+
+13
+00:02:30,167 --> 00:02:39,169
+ClaimSaathi. Because every rejection must cite a clause, and now every family can read it. Try the live demo at the link on screen.

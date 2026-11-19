@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClaimSaathi</title>
+<meta name="description" content="Decode a denied health-insurance claim, test it against IRDAI rules and draft the appeal in minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="#fff" d="M12 2 4 5v6c0 5.25 3.4 10.15 8 11.5 4.6-1.35 8-6.25 8-11.5V5l-8-3Zm0 2.2 6 2.25V11c0 4.1-2.55 8.05-6 9.3V4.2Z"/></svg></span>ClaimSaathi</div>
+  <nav><a href="#rules">IRDAI rules</a><a href="deck.html">Pitch deck</a><span class="demo-pill">Demo · synthetic data</span></nav>
+</header>
+
+<section class="hero">
+  <h1>Your claim was denied.<br><span>That is not the final answer.</span></h1>
+  <p>Upload your policy and the denial letter. ClaimSaathi finds the clause the insurer cited, tests the decision against IRDAI's 2024 Master Circular, and drafts your appeal.</p>
+</section>
+
+<main class="grid">
+  <aside class="panel inputs">
+    <h2><span class="num">1</span> Choose a case</h2>
+    <div id="samples" class="samples"></div>
+    <details class="own" id="own">
+      <summary>…or use your own documents</summary>
+      <label>Policy wording <small>(paste text or upload PDF)</small></label>
+      <input type="file" id="policyFile" accept=".pdf,.txt">
+      <textarea id="policyText" rows="6" placeholder="Paste policy wording, schedule and 'Continuous coverage since' date"></textarea>
+      <label>Denial / TPA letter</label>
+      <input type="file" id="denialFile" accept=".pdf,.txt">
+      <textarea id="denialText" rows="6" placeholder="Paste the rejection letter"></textarea>
+    </details>
+    <button id="decode" class="btn primary" data-testid="decode">Decode my claim</button>
+    <p class="fine">Runs entirely in your browser. Nothing is uploaded.</p>
+  </aside>
+
+  <section class="results" id="results">
+    <div class="empty" id="empty">
+      <div class="steps">
+        <div><b>Upload</b><span>Policy + denial letter</span></div>
+        <div><b>Decode</b><span>6 IRDAI rule tests</span></div>
+        <div><b>Act</b><span>Clause-cited appeal</span></div>
+      </div>
+      <p>Pick a sample case on the left to see ClaimSaathi in action.</p>
+    </div>
+    <div id="out" hidden>
+      <div class="verdict" id="verdict"></div>
+      <div class="card"><h3><span class="num">2</span> Rule checks</h3><ul class="checks" id="checks"></ul></div>
+      <div class="two">
+        <div class="card"><h3>Clause the insurer cited</h3><div id="cited"></div></div>
+        <div class="card"><h3>Clauses that may help you</h3><div id="helpful"></div></div>
+      </div>
+      <div class="card"><h3><span class="num">3</span> Your escalation plan</h3><ol class="timeline" id="timeline"></ol></div>
+      <div class="card letters">
+        <div class="lhead"><h3>Ready-to-send drafts</h3>
+          <div class="tabs" id="tabs"><button data-k="gro" class="on">Insurer GRO</button><button data-k="bima">Bima Bharosa</button><button data-k="omb">Ombudsman</button></div></div>
+        <pre id="letter" data-testid="letter"></pre>
+        <div class="lact"><button class="btn" id="copy">Copy</button><button class="btn" id="dl">Download .txt</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="rules" id="rules">
+  <h2>The rules ClaimSaathi checks</h2>
+  <div class="rgrid">
+    <div><b>Para 17(b)</b><span>Every repudiation must reference the specific policy terms relied on.</span></div>
+    <div><b>Para 13</b><span>After 60 continuous months, no contest for non-disclosure except established fraud.</span></div>
+    <div><b>FAQ 9</b><span>No waiting period may exceed 36 months.</span></div>
+    <div><b>Para 17(a)</b><span>No repudiation without the Claims Review Committee's approval.</span></div>
+    <div><b>Para 16(a)</b><span>Final discharge authorisation within 3 hours.</span></div>
+  </div>
+  <p class="fine">Source: IRDAI Master Circular on Health Insurance Business, IRDAI/HLT/CIR/PRO/84/5/2024 (29 May 2024); IRDAI Health FAQs. ClaimSaathi is decision support, not legal advice.</p>
+</section>
+<footer>ClaimSaathi · built for CODEFESTTHON 2026 · sample insurers and people are fictional</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
